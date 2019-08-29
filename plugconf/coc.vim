@@ -18,3 +18,12 @@ function! s:show_documentation()
         call CocAction('doHover')
     endif
 endfunction
+
+" Coc-translator {{{
+" popup
+nmap <Leader>t <Plug>(coc-translator-p)
+" echo
+nmap <Leader>e <Plug>(coc-translator-e)
+" replace
+nmap <Leader>r <Plug>(coc-translator-r)
+" }}}
