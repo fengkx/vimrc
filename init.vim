@@ -5,7 +5,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 "Appearance
 Plug 'junegunn/seoul256.vim'
-Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'jistr/vim-nerdtree-tabs'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -18,6 +18,7 @@ Plug 'tpope/vim-surround'
 Plug 'luochen1990/rainbow'
 Plug 'scrooloose/nerdcommenter'
 Plug 'Yggdroot/indentLine'
+Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }
 
 "Linting
 Plug 'dense-analysis/ale'
@@ -43,6 +44,8 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
   Plug 'cespare/vim-toml'
   "Nunjucks
   Plug 'niftylettuce/vim-jinja', { 'for': 'njk' }
+  "Markdown
+  Plug 'junegunn/goyo.vim', { 'for': 'markdown' }
 " }}}
 
 " List ends here. Plugins become visible to Vim after this call.
@@ -83,8 +86,10 @@ inoremap <A-Down> <Esc>:m+<CR>
 
 :runtime! ./plugconf/ale.vim
 :runtime! ./plugconf/coc.vim
+":runtime! ./plugconf/markdown-preview.nvim.vim
 :runtime! ./plugconf/nerdtree.vim
 :runtime! ./plugconf/rainbow.vim
+:runtime! ./plugconf/undotree.vim
 :runtime! ./plugconf/vim-go.vim
 :runtime! ./plugconf/vim-javascript.vim
 :runtime! ./plugconf/vim-lisences.vim
