@@ -84,6 +84,13 @@ inoremap <A-Up> <Esc>:m-2<CR>
 inoremap <A-Down> <Esc>:m+<CR>
 " }}}
 
+" Remember positions {{{
+autocmd BufReadPost *
+    \ if line("'\"") > 1 && line("'\"") <= line("$") |
+    \   exe "normal! g`\"" |
+    \ endif
+" }}}
+
 :runtime! ./plugconf/ale.vim
 :runtime! ./plugconf/coc.vim
 ":runtime! ./plugconf/markdown-preview.nvim.vim
