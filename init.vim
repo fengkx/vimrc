@@ -28,6 +28,7 @@ Plug 'tpope/vim-sensible'
 Plug 'junegunn/fzf.vim'
 Plug 'antoyo/vim-licenses'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'vim-utils/vim-man'
 
 "Git
 Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -63,6 +64,7 @@ set number
 set pastetoggle=<F3>
 imap <c-c> <esc>
 set mouse=a
+let mapleader = "\<space>"
 "}}}
 
 " Faster split resizing (+,-) {{{
@@ -91,6 +93,13 @@ autocmd BufReadPost *
     \ endif
 " }}}
 
+" svelete {{{
+augroup svelete
+	au! BufNewFile,BufRead *.svelte set ft=html
+augroup END
+" }}}
+
+
 :runtime! ./plugconf/ale.vim
 :runtime! ./plugconf/coc.vim
 ":runtime! ./plugconf/markdown-preview.nvim.vim
@@ -100,4 +109,4 @@ autocmd BufReadPost *
 :runtime! ./plugconf/vim-go.vim
 :runtime! ./plugconf/vim-javascript.vim
 :runtime! ./plugconf/vim-lisences.vim
-
+:runtime! ./plugconf/vim-man.vim
